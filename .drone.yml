@@ -1,0 +1,12 @@
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo:
+      from_secret: repo_path
+    registry:
+      from_secret: repo_registry
