@@ -1,3 +1,6 @@
+name: drone-testing-sctest
+kind: pipeline
+
 steps:
 - name: docker  
   image: plugins/docker
