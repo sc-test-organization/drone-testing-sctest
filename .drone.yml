@@ -1,15 +1,6 @@
-name: drone-testing-sctest
-kind: pipeline
-
-steps:
-- name: docker  
-  image: plugins/docker
-  settings:
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo:
-      from_secret: repo_path
-    registry:
-      from_secret: repo_registry
+pipeline:
+  
+  deployDev:
+    image: nexus.admin.sharecare.com/drone-kubernetes-deploy
+    version: awk -F = '/^version/ { print $2 }' gradle.properties
+    namespace: dev
