@@ -1,6 +1,6 @@
 pipeline:
-  
+
   deployDev:
     image: nexus.admin.sharecare.com/drone-kubernetes-deploy
-    version: awk -F = '/^version/ { print $2 }' gradle.properties
+    version: 1
     namespace: dev
