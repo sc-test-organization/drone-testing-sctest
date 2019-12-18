@@ -1,11 +1,10 @@
 kind: pipeline
 name: build
 
-  - name: hello:
-    image: alpine
-    access_token: placeholder
-    commands: 
-      - echo $PLUGIN_ACCESS_TOKEN
+  - name: docker
+    image: nexus.admin.sharecare.com/drone-nexus-docker
+    settings:
+      version: "1.0.0"
       
   - name: archive
     image: nexus.admin.sharecare.com/drone-build-plugin
