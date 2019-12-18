@@ -1,0 +1,4 @@
+name: drone-testing-sctest
+ports:
+  external: 80
+  container: 3000
