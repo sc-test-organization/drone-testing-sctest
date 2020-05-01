@@ -1,6 +1,7 @@
 kind: pipeline
 name: build
 
+steps:
   - name: docker
     image: nexus.admin.sharecare.com/drone-nexus-docker
     settings:
