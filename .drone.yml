@@ -5,7 +5,7 @@ steps:
   - name: docker
     image: nexus.admin.sharecare.com/drone-nexus-docker
     settings:
-      version: "1.0.0"
+      version: 1
       
   - name: archive
     image: nexus.admin.sharecare.com/drone-build-plugin
